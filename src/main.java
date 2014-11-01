@@ -9,11 +9,11 @@ import lab.interfaces.IMamifer;
  */
 public class main {
     public static void main(String[] args) {
-        IMamifer mamifer1=new AnimalSalbatic("leu",false,5);
-        IMamifer mamifer2=new AnimalDomestic("vaca",true,"Andrei");
-        Animale animal1=new AnimalSalbatic("zebra",false,0);
-        AnimalSalbatic salbatic=new AnimalSalbatic("hiena",false,2);
-        AnimalDomestic domestic=new AnimalDomestic("caine",true,"Andreea");
+        IMamifer mamifer1 = new AnimalSalbatic("leu", false, 5);
+        IMamifer mamifer2 = new AnimalDomestic("vaca", true, "Andrei");
+        Animale animal1 = new AnimalSalbatic("zebra", false, 0);
+        AnimalSalbatic salbatic = new AnimalSalbatic("hiena", false, 2);
+        AnimalDomestic domestic = new AnimalDomestic("caine", true, "Andreea");
 
 
         try {
@@ -28,9 +28,20 @@ public class main {
             e.printStackTrace();
         }
 
-        System.out.println(salbatic.getDenumire()+" este un animal domestic?\n" + (salbatic.EDomestic("hiena") ? "Yes!" : "No!"));
+        System.out.println(salbatic.getDenumire() + " este un animal domestic?\n" + (salbatic.EDomestic("hiena") ? "Yes!" : "No!"));
 
-        System.out.println(domestic.getDenumire()+" este un animal domestic?\n" + (domestic.EDomestic("caine") ? "Yes!" : "No!"));
+        System.out.println(domestic.getDenumire() + " este un animal domestic?\n" + (domestic.EDomestic("caine") ? "Yes!" : "No!"));
 
+        try {
+            animal1.Mamifer();
+        } catch (MamiferException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            animal1.info();
+        } catch (MamiferException e) {
+            e.printStackTrace();
+        }
     }
 }
