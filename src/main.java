@@ -28,5 +28,9 @@ public class main {
             e.printStackTrace();
         }
 
+        System.out.println(salbatic.getDenumire()+" este un animal domestic?\n" + (salbatic.EDomestic("hiena") ? "Yes!" : "No!"));
+
+        System.out.println(domestic.getDenumire()+" este un animal domestic?\n" + (domestic.EDomestic("caine") ? "Yes!" : "No!"));
+
     }
 }
