@@ -6,17 +6,16 @@ import lab.interfaces.IMamifer;
 /**
  * Created by CristiaN1 on 11/1/2014.
  */
-public class AnimalSalbatic extends Animale implements IMamifer {
+public class AnimalDomestic extends Animale implements IMamifer {
+    String stapan;
 
-    public int victime;
-
-    public AnimalSalbatic(String den, boolean ISdomestic, int victime) {
+    public AnimalDomestic(String den, boolean ISdomestic, String stapan) {
         super(den, ISdomestic);
-        this.victime = victime;
+        this.stapan = stapan;
     }
 
-    public int getVictime() {
-        return victime;
+    public String getStapan(){
+        return stapan;
     }
 
     @Override
@@ -35,7 +34,6 @@ public class AnimalSalbatic extends Animale implements IMamifer {
 
     @Override
     public void info() throws MamiferException {
-        System.out.println("Suntem in subclasa AnimalSalbatic a clasei Animale!");
+        System.out.println("Suntem in subclasa AnimalDomestic a clasei Animale!");
     }
-
 }
